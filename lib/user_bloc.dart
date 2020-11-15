@@ -43,7 +43,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
           this.add(UserFetchMoreEvent());
         });
         //go back to previous success state
-        await Future.delayed(Duration(milliseconds: 500));
+        await Future.delayed(Duration(milliseconds: 3000));
         yield currentState;
       }
     }

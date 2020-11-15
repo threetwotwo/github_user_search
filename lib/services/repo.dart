@@ -21,7 +21,7 @@ class Repo {
       return items.map((e) => User.fromJson(e)).toList();
     } on DioError catch (e) {
       print('Repo.getUsers ${e.response}');
-      throw (e.response.statusMessage);
+      throw (Map.from(e.response.data)['message'] ?? 'Error');
     }
   }
 }

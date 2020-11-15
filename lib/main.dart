@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(backgroundColor: Colors.white),
       title: 'Flutter Demo',
       home: BlocProvider(
         create: (context) => UserBloc(repo: Repo()),
