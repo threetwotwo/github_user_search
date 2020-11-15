@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:github_user_search/user_event.dart';
+import 'package:github_user_search/bloc/user_event.dart';
 import 'package:github_user_search/services/repo.dart';
-import 'package:github_user_search/user.dart';
-import 'package:github_user_search/user_state.dart';
+import 'package:github_user_search/models/user.dart';
+import 'package:github_user_search/bloc/user_state.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   final Repo repo;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_user_search/user.dart';
+import 'package:github_user_search/models/user.dart';
 
 class UserListItem extends StatelessWidget {
   final User user;

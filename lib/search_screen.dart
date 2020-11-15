@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:github_user_search/user_event.dart';
-import 'package:github_user_search/user.dart';
-import 'package:github_user_search/user_bloc.dart';
-import 'package:github_user_search/user_state.dart';
+import 'package:github_user_search/bloc/user_event.dart';
+import 'package:github_user_search/models/user.dart';
+import 'package:github_user_search/bloc/user_bloc.dart';
+import 'package:github_user_search/bloc/user_state.dart';
 import 'package:github_user_search/widgets/search_bar.dart';
 import 'package:github_user_search/widgets/user_list_item.dart';
 

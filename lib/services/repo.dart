@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:github_user_search/user.dart';
+import 'package:github_user_search/models/user.dart';
 
 class Repo {
   //Singleton
