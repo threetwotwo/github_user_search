@@ -88,8 +88,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
           if (userState is UserSuccessState) {
             _removeCurrentSnackbar(context);
-            final users = userState.users ?? [];
-            _users = users;
+            _users = userState.users ?? [];
           }
 
           return _users.isEmpty
