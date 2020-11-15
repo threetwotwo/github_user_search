@@ -14,14 +14,14 @@ class Repo {
       final response = await dio
           .get('https://api.github.com/search/users?q=$query&page=$page');
 
-      final data = response.data ?? {};
-
-      final List items = List.from(data['items']);
-
-      return items.map((e) => User.fromJson(e)).toList();
+      if (response.statusCode == 200) {
+        final data = response?.data ?? {};
+        final List items = List.from(data['items']);
+        return items.map((e) => User.fromJson(e)).toList();
+      } else
+        return [];
     } on DioError catch (e) {
-      print('Repo.getUsers ${e.response}');
-      throw (Map.from(e.response.data)['message'] ?? 'Error');
+      throw (Map.from(e?.response?.data)['message'] ?? 'Error');
     }
   }
 }
